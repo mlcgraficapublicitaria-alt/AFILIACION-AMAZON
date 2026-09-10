@@ -11,12 +11,12 @@
     --petrol:#17343B; --ivory:#F7F4EE; --sage:#9CAD91; --sky:#C9DFE5;
     --coral:#E5785B; --white:#FFFFFF; --muted:#52656A; --line:#D9DEDA;
   }
-  html, body { margin:0; padding:0; background:#dfe5e3; color:var(--petrol); font-family:Arial,Helvetica,sans-serif; }
+  html, body { margin:0; padding:0; background:#dfe5e3; color:var(--petrol); font-family:'Source Sans 3','Segoe UI',Arial,sans-serif; }
   .page { width:210mm; height:297mm; margin:0 auto 8mm; background:var(--ivory); position:relative; overflow:hidden; page-break-after:always; }
   .page:last-child { page-break-after:auto; }
   .pad { padding:18mm 18mm 16mm; height:100%; }
   .eyebrow { font-size:8pt; letter-spacing:.18em; text-transform:uppercase; color:#708276; font-weight:700; }
-  h1,h2,h3 { font-family:Georgia,'Times New Roman',serif; margin:0; line-height:1.03; }
+  h1,h2,h3 { font-family:'Fraunces',Georgia,'Times New Roman',serif; margin:0; line-height:1.03; }
   h1 { font-size:38pt; letter-spacing:-.035em; }
   h2 { font-size:27pt; letter-spacing:-.025em; }
   h3 { font-size:15pt; }
@@ -44,7 +44,7 @@
   .swatch.light { color:var(--petrol); }
   .list { margin:0; padding-left:5mm; }
   .list li { margin:0 0 2.5mm; font-size:9.5pt; line-height:1.42; color:#30494f; }
-  .quote { font-family:Georgia,serif; font-size:22pt; line-height:1.18; padding:8mm; border-left:2mm solid var(--coral); background:#fff; }
+  .quote { font-family:'Fraunces',Georgia,serif; font-size:22pt; line-height:1.18; padding:8mm; border-left:2mm solid var(--coral); background:#fff; }
   .hero-photo { width:100%; height:86mm; object-fit:cover; object-position:top; border-radius:5mm; border:1px solid var(--line); }
   .board { width:100%; max-height:208mm; object-fit:contain; background:#fff; border:1px solid var(--line); border-radius:4mm; }
   .screen { width:100%; height:92mm; object-fit:cover; object-position:top; border:1px solid var(--line); border-radius:4mm; background:#fff; }
@@ -111,18 +111,22 @@
 </div></section>
 
 <section class="page"><div class="pad">
-  <div class="topline"><div class="brand"><span class="mark"></span>CABINA LIGERA</div><div class="folio">04 · COLOR Y TIPO</div></div>
+  <div class="topline"><div class="brand"><span class="mark"></span>CABINA LIGERA</div><div class="folio">04 · COLOR Y TIPOGRAFÍA</div></div>
   <div class="eyebrow">Sistema visual</div><h2 style="margin:3mm 0 8mm">Una paleta propia, sobria y viajera.</h2>
   <div class="grid4">
     <div class="swatch" style="background:#17343B">Petróleo<br>#17343B</div><div class="swatch light" style="background:#F7F4EE">Marfil<br>#F7F4EE</div><div class="swatch" style="background:#9CAD91">Salvia<br>#9CAD91</div><div class="swatch light" style="background:#C9DFE5">Cielo<br>#C9DFE5</div>
   </div>
   <div class="grid4" style="margin-top:4mm"><div class="swatch" style="background:#E5785B">Coral<br>#E5785B</div><div class="swatch light" style="background:#fff">Blanco<br>#FFFFFF</div><div class="swatch" style="background:#52656A">Texto 2º<br>#52656A</div><div class="swatch" style="background:#17343B;color:#fff">AA<br>alto contraste</div></div>
-  <div class="grid2" style="margin-top:12mm">
-    <div class="card"><div class="eyebrow">Titulares</div><div style="font:28pt Georgia,serif;line-height:1.05;margin:4mm 0">Viaja ligero.<br>Elige mejor.</div><p>Serif editorial: autoridad amable, ritmo y diferenciación.</p></div>
-    <div class="card"><div class="eyebrow">Interfaz y lectura</div><div style="font:700 22pt Arial,sans-serif;margin:4mm 0">Comparativas claras</div><p>Sans humanista: lectura móvil, datos, controles y contenido largo.</p></div>
+  <div class="grid2" style="margin-top:10mm">
+    <div class="card"><div class="eyebrow">Titulares · Fraunces</div><div style="font:700 28pt 'Fraunces',Georgia,serif;line-height:1.05;margin:4mm 0">Viaja ligero.<br>Elige mejor.</div><p>Serif editorial expresiva y amable. Pesos 600–700; tracking de −2 % a −1 %.</p></div>
+    <div class="card"><div class="eyebrow">Interfaz · Source Sans 3</div><div style="font:700 22pt 'Source Sans 3','Segoe UI',Arial,sans-serif;margin:4mm 0">Comparativas claras</div><p>Sans de alta legibilidad para navegación, datos, controles y lectura prolongada. Pesos 400, 600 y 700.</p></div>
   </div>
-  <h3 style="margin:10mm 0 4mm">Principios de uso</h3>
-  <ul class="list"><li>El petróleo sostiene texto, navegación y acciones principales.</li><li>Salvia y cielo codifican ayuda, método y confianza.</li><li>El coral se reserva para CTA y advertencias; nunca domina la interfaz.</li><li>Evitar cualquier combinación que evoque la identidad visual de Amazon o de una aerolínea.</li></ul>
+  <div class="grid2" style="margin-top:5mm">
+    <div><div class="spec"><b>H1 / Hero</b><span>56/59 px desktop · 40/43 px móvil · Fraunces 700</span></div><div class="spec"><b>H2</b><span>40/44 px desktop · 32/36 px móvil · Fraunces 650</span></div><div class="spec"><b>H3</b><span>28/34 px desktop · 24/30 px móvil · Fraunces 600</span></div></div>
+    <div><div class="spec"><b>Cuerpo</b><span>18/28 px desktop · 17/26 px móvil · Source Sans 3 400</span></div><div class="spec"><b>UI / botones</b><span>16/20 px · Source Sans 3 600–700</span></div><div class="spec"><b>Metadatos</b><span>15/20 px · Source Sans 3 600; nunca menos de 14 px</span></div></div>
+  </div>
+  <div class="card sage" style="margin-top:5mm"><b>Implementación web</b><p class="small">Servir WOFF2 variables en local con <i>font-display: swap</i>. Fallback titulares: Georgia, Times New Roman, serif. Fallback interfaz: Segoe UI, Arial, sans-serif. Conservar tildes, ñ y signos españoles al generar subconjuntos; no simular negritas ni cursivas.</p></div>
+  <p class="small" style="margin-top:4mm">Fraunces y Source Sans 3 se distribuyen bajo SIL Open Font License 1.1. Mantener las licencias junto a los archivos tipográficos.</p>
   <div class="footer"><span>Paleta independiente de Amazon y aerolíneas</span><span>04</span></div>
 </div></section>
 
