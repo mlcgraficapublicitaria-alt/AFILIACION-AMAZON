@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manual corporativo · CABINA LIGERA</title>
+<style>
+  @page { size: A4 portrait; margin: 0; }
+  * { box-sizing: border-box; }
+  :root {
+    --petrol:#17343B; --ivory:#F7F4EE; --sage:#9CAD91; --sky:#C9DFE5;
+    --coral:#E5785B; --white:#FFFFFF; --muted:#52656A; --line:#D9DEDA;
+  }
+  html, body { margin:0; padding:0; background:#dfe5e3; color:var(--petrol); font-family:Arial,Helvetica,sans-serif; }
+  .page { width:210mm; height:297mm; margin:0 auto 8mm; background:var(--ivory); position:relative; overflow:hidden; page-break-after:always; }
+  .page:last-child { page-break-after:auto; }
+  .pad { padding:18mm 18mm 16mm; height:100%; }
+  .eyebrow { font-size:8pt; letter-spacing:.18em; text-transform:uppercase; color:#708276; font-weight:700; }
+  h1,h2,h3 { font-family:Georgia,'Times New Roman',serif; margin:0; line-height:1.03; }
+  h1 { font-size:38pt; letter-spacing:-.035em; }
+  h2 { font-size:27pt; letter-spacing:-.025em; }
+  h3 { font-size:15pt; }
+  p { font-size:10.5pt; line-height:1.52; margin:0 0 4mm; color:#30494f; }
+  .lead { font-size:15pt; line-height:1.42; max-width:150mm; }
+  .small { font-size:8.5pt; line-height:1.45; color:var(--muted); }
+  .rule { height:1px; background:#b9c5c1; margin:6mm 0; }
+  .topline { display:flex; justify-content:space-between; align-items:center; margin-bottom:12mm; }
+  .brand { display:flex; align-items:center; gap:3mm; font-weight:800; letter-spacing:.09em; font-size:10pt; }
+  .mark { width:10mm; height:12mm; border:2px solid var(--petrol); border-radius:3mm; position:relative; }
+  .mark:before { content:''; position:absolute; width:4mm; height:2mm; border:2px solid var(--petrol); border-bottom:0; border-radius:2mm 2mm 0 0; left:1mm; top:-3mm; }
+  .folio { font-size:8pt; color:var(--muted); letter-spacing:.12em; }
+  .footer { position:absolute; left:18mm; right:18mm; bottom:9mm; display:flex; justify-content:space-between; font-size:7.5pt; color:#64777b; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:7mm; }
+  .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:5mm; }
+  .grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:4mm; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:4mm; padding:5mm; }
+  .card.sky { background:#eaf5f7; border-color:#d2e6e9; }
+  .card.sage { background:#edf2e9; border-color:#dce6d7; }
+  .card.coral { background:#fff0eb; border-color:#f3c9bc; }
+  .num { width:9mm; height:9mm; border-radius:50%; background:var(--petrol); color:#fff; display:grid; place-items:center; font-weight:700; font-size:9pt; }
+  .chips { display:flex; flex-wrap:wrap; gap:2mm; }
+  .chip { border-radius:99px; padding:2mm 3.5mm; background:#e7eee4; font-size:8pt; font-weight:700; }
+  .swatch { height:24mm; border-radius:4mm; border:1px solid rgba(0,0,0,.08); padding:3mm; display:flex; align-items:flex-end; color:#fff; font-size:8pt; font-weight:700; }
+  .swatch.light { color:var(--petrol); }
+  .list { margin:0; padding-left:5mm; }
+  .list li { margin:0 0 2.5mm; font-size:9.5pt; line-height:1.42; color:#30494f; }
+  .quote { font-family:Georgia,serif; font-size:22pt; line-height:1.18; padding:8mm; border-left:2mm solid var(--coral); background:#fff; }
+  .hero-photo { width:100%; height:86mm; object-fit:cover; object-position:top; border-radius:5mm; border:1px solid var(--line); }
+  .board { width:100%; max-height:208mm; object-fit:contain; background:#fff; border:1px solid var(--line); border-radius:4mm; }
+  .screen { width:100%; height:92mm; object-fit:cover; object-position:top; border:1px solid var(--line); border-radius:4mm; background:#fff; }
+  .mobile { width:100%; height:130mm; object-fit:cover; object-position:top; border:1px solid var(--line); border-radius:4mm; background:#fff; }
+  .caption { font-size:7.5pt; color:var(--muted); margin-top:2mm; }
+  .spec { display:grid; grid-template-columns:44mm 1fr; gap:3mm; padding:3mm 0; border-bottom:1px solid var(--line); font-size:9.5pt; }
+  .spec b { color:var(--petrol); }
+  .cover { background:linear-gradient(145deg,var(--petrol) 0 62%,#21464d 62% 100%); color:#fff; }
+  .cover .pad { padding:18mm; }
+  .cover h1 { color:#fff; font-size:45pt; max-width:165mm; margin-top:36mm; }
+  .cover .lead { color:#dce9e6; margin-top:8mm; max-width:135mm; }
+  .cover .eyebrow { color:#b9cabf; }
+  .cover-mark { position:absolute; width:62mm; height:72mm; right:16mm; bottom:18mm; border:3px solid #fff; border-radius:18mm; opacity:.11; }
+  .cover-mark:before,.cover-mark:after { content:''; position:absolute; background:#fff; opacity:.75; }
+  .cover-mark:before { width:34mm; height:3px; left:14mm; top:22mm; }
+  .cover-mark:after { width:32mm; height:24mm; left:15mm; bottom:12mm; border-radius:5mm; }
+  .tone { height:10mm; border-radius:3mm; }
+  .check { display:flex; gap:3mm; align-items:flex-start; margin-bottom:3mm; }
+  .check i { width:6mm; height:6mm; border-radius:50%; background:#dbe9d6; color:#3f6a4a; font-style:normal; display:grid; place-items:center; font-size:8pt; flex:none; }
+  .timeline { display:grid; grid-template-columns:10mm 1fr; gap:3mm 4mm; }
+  .timeline .num { width:8mm; height:8mm; }
+  @media print { html,body { background:#fff; } .page { margin:0; } }
+</style>
+</head>
+<body>
+
+<section class="page cover"><div class="pad">
+  <div class="eyebrow">Manual corporativo y sistema digital · Versión 1.0</div>
+  <h1>CABINA<br>LIGERA</h1>
+  <p class="lead">Identidad, dirección visual y experiencia editorial para viajar con menos equipaje y mejores decisiones.</p>
+  <div style="margin-top:16mm;width:36mm;height:2mm;background:var(--coral)"></div>
+  <p style="color:#cddbd7;margin-top:8mm">Proyecto provisional · Septiembre de 2026</p>
+  <div class="cover-mark"></div>
+  <div class="footer" style="color:#cad8d4"><span>Dirección creativa: KVASIR</span><span>01</span></div>
+</div></section>
+
+<section class="page"><div class="pad">
+  <div class="topline"><div class="brand"><span class="mark"></span>CABINA LIGERA</div><div class="folio">02 · ESENCIA</div></div>
+  <div class="eyebrow">Fundamento de marca</div><h2 style="margin-top:3mm">Viajar ligero es decidir mejor.</h2>
+  <p class="lead" style="margin-top:7mm">CABINA LIGERA es un medio editorial independiente que ayuda a elegir y organizar equipaje de cabina sin facturar y sin sorpresas en la puerta de embarque.</p>
+  <div class="quote" style="margin:12mm 0">“Te ayudamos a elegir y organizar tu equipaje para viajar ligero, sin facturar y sin sorpresas en la puerta de embarque.”</div>
+  <div class="grid2">
+    <div class="card sage"><h3>Propósito</h3><p>Convertir medidas, políticas y especificaciones dispersas en decisiones sencillas, comprensibles y prácticas.</p></div>
+    <div class="card sky"><h3>Posicionamiento</h3><p>Una guía independiente entre el viajero y la compra: criterio editorial antes que presión comercial.</p></div>
+  </div>
+  <h3 style="margin:10mm 0 4mm">Valores</h3>
+  <div class="grid3">
+    <div class="card"><b>Claridad</b><p class="small">Datos directos, jerarquía limpia.</p></div><div class="card"><b>Utilidad</b><p class="small">Contenido aplicable al viaje real.</p></div><div class="card"><b>Confianza</b><p class="small">Fuentes, fechas y límites visibles.</p></div>
+    <div class="card"><b>Ligereza</b><p class="small">Menos ruido, mejor elección.</p></div><div class="card"><b>Orden</b><p class="small">Sistemas que facilitan comparar.</p></div><div class="card"><b>Transparencia</b><p class="small">Afiliación siempre identificada.</p></div>
+  </div>
+  <div class="footer"><span>Manual corporativo · CABINA LIGERA</span><span>02</span></div>
+</div></section>
+
+<section class="page"><div class="pad">
+  <div class="topline"><div class="brand"><span class="mark"></span>CABINA LIGERA</div><div class="folio">03 · IDENTIDAD</div></div>
+  <div class="eyebrow">Logotipo seleccionado</div><h2 style="margin:3mm 0 7mm">Cabina modular · versión refinada</h2>
+  <img class="hero-photo" src="24-logotipo-cabina-modular-refinado.png" alt="Presentación del logotipo Cabina Ligera">
+  <div class="grid2" style="margin-top:8mm">
+    <div><h3>Idea</h3><p>Una mochila compacta se integra en un marco de medida. Los módulos interiores representan organización, capacidad útil y aprovechamiento del espacio.</p></div>
+    <div><h3>Carácter</h3><p>Funcional, directo y reconocible. El símbolo actúa como herramienta editorial, no como marca de fabricante de equipaje.</p></div>
+  </div>
+  <div class="card coral" style="margin-top:8mm"><b>Estado provisional</b><p class="small">Antes de publicación: validar naming, dominio, registro de marca y reconstrucción vectorial definitiva del símbolo.</p></div>
+  <div class="footer"><span>Identidad adaptable a un cambio de naming</span><span>03</span></div>
+</div></section>
+
+<section class="page"><div class="pad">
+  <div class="topline"><div class="brand"><span class="mark"></span>CABINA LIGERA</div><div class="folio">04 · COLOR Y TIPO</div></div>
+  <div class="eyebrow">Sistema visual</div><h2 style="margin:3mm 0 8mm">Una paleta propia, sobria y viajera.</h2>
+  <div class="grid4">
+    <div class="swatch" style="background:#17343B">Petróleo<br>#17343B</div><div class="swatch light" style="background:#F7F4EE">Marfil<br>#F7F4EE</div><div class="swatch" style="background:#9CAD91">Salvia<br>#9CAD91</div><div class="swatch light" style="background:#C9DFE5">Cielo<br>#C9DFE5</div>
+  </div>
+  <div class="grid4" style="margin-top:4mm"><div class="swatch" style="background:#E5785B">Coral<br>#E5785B</div><div class="swatch light" style="background:#fff">Blanco<br>#FFFFFF</div><div class="swatch" style="background:#52656A">Texto 2º<br>#52656A</div><div class="swatch" style="background:#17343B;color:#fff">AA<br>alto contraste</div></div>
+  <div class="grid2" style="margin-top:12mm">
+    <div class="card"><div class="eyebrow">Titulares</div><div style="font:28pt Georgia,serif;line-height:1.05;margin:4mm 0">Viaja ligero.<br>Elige mejor.</div><p>Serif editorial: autoridad amable, ritmo y diferenciación.</p></div>
+    <div class="card"><div class="eyebrow">Interfaz y lectura</div><div style="font:700 22pt Arial,sans-serif;margin:4mm 0">Comparativas claras</div><p>Sans humanista: lectura móvil, datos, controles y contenido largo.</p></div>
+  </div>
+  <h3 style="margin:10mm 0 4mm">Principios de uso</h3>
+  <ul class="list"><li>El petróleo sostiene texto, navegación y acciones principales.</li><li>Salvia y cielo codifican ayuda, método y confianza.</li><li>El coral se reserva para CTA y advertencias; nunca domina la interfaz.</li><li>Evitar cualquier combinación que evoque la identidad visual de Amazon o de una aerolínea.</li></ul>
+  <div class="footer"><span>Paleta independiente de Amazon y aerolíneas</span><span>04</span></div>
+</div></section>
+
+<section class="page"><div class="pad">
+  <div class="topline"><div class="brand"><span class="mark"></span>CABINA LIGERA</div><div class="folio">05 · RETÍCULA</div></div>
+  <div class="eyebrow">Diseño responsive</div><h2 style="margin:3mm 0 8mm">Jerarquía antes que densidad.</h2>
+  <img class="board" src="09-sistema-visual-basico.png" alt="Sistema visual de Cabina Ligera">
+  <div class="grid2" style="margin-top:7mm"><div class="card"><h3>Desktop</h3><p>12 columnas · máximo aproximado 1200 px · medianil 24 px.</p></div><div class="card"><h3>Móvil</h3><p>4 columnas · margen 20 px · medianil 16 px · controles mínimos de 44 px.</p></div></div>
+  <div class="footer"><span>Escala espacial: 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64</span><span>05</span></div>
+</div></section>
+
+<section class="page"><div class="pad">
+  <div class="topline"><div class="brand"><span class="mark"></span>CABINA LIGERA</div><div class="folio">06 · COMPONENTES</div></div>
+  <div class="eyebrow">Biblioteca UI</div><h2 style="margin:3mm 0 8mm">Un sistema, múltiples recorridos.</h2>
+  <img class="board" src="10-biblioteca-componentes-responsive.png" alt="Biblioteca de componentes responsive">
+  <div class="chips" style="margin-top:7mm"><span class="chip">Navegación</span><span class="chip">Tarjetas editoriales</span><span class="chip">Producto</span><span class="chip">Filtros</span><span class="chip">Comparador</span><span class="chip">Avisos</span><span class="chip">Formularios</span><span class="chip">Footer legal</span></div>
+  <div class="footer"><span>Componentes reutilizables y alimentados por datos</span><span>06</span></div>
+</div></section>
+
+<section class="page"><div class="pad">
+  <div class="topline"><div class="brand"><span class="mark"></span>CABINA LIGERA</div><div class="folio">07 · ARQUITECTURA</div></div>
+  <div class="eyebrow">Mapa de experiencia</div><h2 style="margin:3mm 0 8mm">Del contexto a la decisión.</h2>
+  <div class="timeline">
+    <div class="num">1</div><div class="card"><h3>Descubrir</h3><p>Inicio, buscador e índice de categorías ordenan la entrada por necesidad real.</p></div>
+    <div class="num">2</div><div class="card sky"><h3>Acotar</h3><p>Filtros por aerolínea, medidas, duración y perfil reducen el ruido.</p></div>
+    <div class="num">3</div><div class="card"><h3>Comparar</h3><p>La página pilar alinea dimensiones, capacidad, peso, pros, contras y uso recomendado.</p></div>
+    <div class="num">4</div><div class="card sage"><h3>Comprender</h3><p>Reseñas y guías explican pruebas, limitaciones y organización práctica.</p></div>
+    <div class="num">5</div><div class="card"><h3>Verificar</h3><p>Fuente, fecha de revisión, medidas de aerolínea y metodología quedan visibles.</p></div>
+    <div class="num">6</div><div class="card coral"><h3>Decidir</h3><p>El enlace comercial aparece identificado y después del criterio editorial.</p></div>
+  </div>
+  <h3 style="margin:10mm 0 4mm">Plantillas</h3>
+  <div class="grid3"><div class="card"><b>Editorial</b><p class="small">Inicio · Guía · Metodología</p></div><div class="card"><b>Decisión</b><p class="small">Comparativa · Reseña · Aerolínea</p></div><div class="card"><b>Sistema</b><p class="small">Buscar · Contacto · Legales</p></div></div>
+  <div class="footer"><span>Arquitectura modular y escalable</span><span>07</span></div>
+</div></section>
+
+<section class="page"><div class="pad">
+  <div class="topline"><div class="brand"><span class="mark"></span>CABINA LIGERA</div><div class="folio">08 · DESKTOP</div></div>
+  <div class="eyebrow">Pantallas principales</div><h2 style="margin:3mm 0 7mm">Experiencia editorial en escritorio.</h2>
+  <div class="grid2">
+    <div><img class="screen" src="01-inicio-desktop.png"><div class="caption">01 · Inicio</div></div>
+    <div><img class="screen" src="02-comparativa-desktop.png"><div class="caption">02 · Comparativa</div></div>
+    <div><img class="screen" src="03-resena-producto-desktop.png"><div class="caption">03 · Reseña individual</div></div>
+    <div><img class="screen" src="04-guia-informativa-desktop.png"><div class="caption">04 · Guía informativa</div></div>
+  </div>
+  <div class="footer"><span>Las imágenes son referencia visual, no contenido final licenciado</span><span>08</span></div>
+</div></section>
+
+<section class="page"><div class="pad">
+  <div class="topline"><div class="brand"><span class="mark"></span>CABINA LIGERA</div><div class="folio">09 · MÓVIL</div></div>
+  <div class="eyebrow">Responsive</div><h2 style="margin:3mm 0 7mm">Una sola columna. Cero compresión.</h2>
+  <div class="grid4">
+    <div><img class="mobile" src="05-inicio-mobile.png"><div class="caption">Inicio</div></div>
+    <div><img class="mobile" src="06-comparativa-mobile.png"><div class="caption">Comparativa</div></div>
+    <div><img class="mobile" src="07-resena-producto-mobile.png"><div class="caption">Reseña</div></div>
+    <div><img class="mobile" src="08-guia-informativa-mobile.png"><div class="caption">Guía</div></div>
+  </div>
+  <div class="grid2" style="margin-top:7mm"><div class="card"><h3>Adaptar, no reducir</h3><p>Tablas se convierten en filas o tarjetas. Los filtros pasan a paneles. La lectura manda.</p></div><div class="card sage"><h3>Uso real</h3><p>Objetivos táctiles amplios, foco visible y acciones comerciales que no obstruyen el contenido.</p></div></div>
+  <div class="footer"><span>Mobile first en controles y lectura</span><span>09</span></div>
+</div></section>
+
+<section class="page"><div class="pad">
+  <div class="topline"><div class="brand"><span class="mark"></span>CABINA LIGERA</div><div class="folio">10 · EXTENSIÓN</div></div>
+  <div class="eyebrow">Ecosistema de páginas</div><h2 style="margin:3mm 0 7mm">Contenido útil en cada punto del viaje.</h2>
+  <div class="grid2">
+    <div><img class="screen" src="12-pagina-aerolinea-desktop.png"><div class="caption">Página por aerolínea</div></div>
+    <div><img class="screen" src="14-indice-categorias-desktop.png"><div class="caption">Índice de categorías</div></div>
+    <div><img class="screen" src="16-metodologia-sobre-nosotros-desktop.png"><div class="caption">Metodología / Sobre nosotros</div></div>
+    <div><img class="screen" src="18-contacto-desktop.png"><div class="caption">Contacto y correcciones</div></div>
+  </div>
+  <div class="footer"><span>Fuentes y fechas deben actualizarse desde datos estructurados</span><span>10</span></div>
+</div></section>
+
+<section class="page"><div class="pad">
+  <div class="topline"><div class="brand"><span class="mark"></span>CABINA LIGERA</div><div class="folio">11 · FOTOGRAFÍA</div></div>
+  <div class="eyebrow">Dirección de imagen</div><h2 style="margin:3mm 0 8mm">Viajes reales, equipaje posible.</h2>
+  <div class="grid2">
+    <div class="card sage"><h3>Sí</h3><ul class="list"><li>Luz natural y escenarios cotidianos.</li><li>Equipaje compacto en uso real.</li><li>Pruebas de capacidad, medición y organización.</li><li>Fondos sobrios que favorecen la lectura.</li><li>Personas como contexto, no como pose aspiracional.</li></ul></div>
+    <div class="card coral"><h3>No</h3><ul class="list"><li>Estética de dropshipping o catálogo genérico.</li><li>Logotipos dominantes de Amazon o aerolíneas.</li><li>Descuentos visuales, urgencia o falsa escasez.</li><li>Fotos sin licencia o imágenes alteradas fuera de permiso.</li><li>Lujo influencer desconectado del viaje práctico.</li></ul></div>
+  </div>
+  <img class="board" style="margin-top:8mm;max-height:135mm" src="09-sistema-visual-basico.png" alt="Ejemplos de dirección fotográfica">
+  <div class="card sky" style="margin-top:7mm"><b>Regla operativa</b><p class="small">Las fotografías generadas de los mockups son guía de encuadre y tono. La implementación debe utilizar recursos propios, stock con licencia o imágenes autorizadas por el programa correspondiente.</p></div>
+  <div class="footer"><span>Autenticidad antes que espectacularidad</span><span>11</span></div>
+</div></section>
+
+<section class="page"><div class="pad">
+  <div class="topline"><div class="brand"><span class="mark"></span>CABINA LIGERA</div><div class="folio">12 · VOZ</div></div>
+  <div class="eyebrow">Lenguaje editorial</div><h2 style="margin:3mm 0 8mm">Claro, útil y sin presión.</h2>
+  <div class="grid2">
+    <div><h3>Cómo hablamos</h3><div class="spec"><b>Directo</b><span>“Comprueba las medidas antes de viajar.”</span></div><div class="spec"><b>Honesto</b><span>“Buena opción, con estas limitaciones.”</span></div><div class="spec"><b>Práctico</b><span>“Recomendado para escapadas de 3 a 5 días.”</span></div><div class="spec"><b>Transparente</b><span>“Enlace de afiliado.”</span></div></div>
+    <div><h3>Qué evitamos</h3><div class="card coral" style="margin-top:4mm"><ul class="list"><li>“La mejor mochila del mercado” sin prueba.</li><li>“Ahorra un 80 %” sin fuente verificable.</li><li>“Últimas unidades” o urgencia artificial.</li><li>Garantizar compatibilidad futura con una aerolínea.</li><li>Confundir valoración editorial con estrellas de Amazon.</li></ul></div></div>
+  </div>
+  <div class="quote" style="margin-top:12mm">Viaja ligero. Elige mejor. Evita facturar.</div>
+  <h3 style="margin:10mm 0 4mm">Mensajes de confianza</h3>
+  <div class="grid2"><div class="card sky"><b>Afiliación</b><p class="small">Algunos enlaces son de afiliado. La compra puede generar una comisión sin coste adicional.</p></div><div class="card sage"><b>Actualización</b><p class="small">Mostrar siempre cuándo se revisó y de dónde procede la información cambiante.</p></div></div>
+  <div class="footer"><span>El contenido debe funcionar aunque el enlace comercial falle</span><span>12</span></div>
+</div></section>
+
+<section class="page"><div class="pad">
+  <div class="topline"><div class="brand"><span class="mark"></span>CABINA LIGERA</div><div class="folio">13 · CONFIANZA</div></div>
+  <div class="eyebrow">Afiliación y legal</div><h2 style="margin:3mm 0 8mm">Independencia visible.</h2>
+  <div class="card sky"><h3>Principio</h3><p class="lead" style="font-size:14pt">El criterio editorial precede al enlace comercial. La afiliación se identifica junto al CTA y nunca condiciona puntuaciones, pros o contras.</p></div>
+  <div class="grid2" style="margin-top:8mm">
+    <div><img class="screen" src="20-plantilla-legal-desktop.png"><div class="caption">Plantilla legal desktop</div></div>
+    <div><img class="screen" src="21-legales-mobile.png"><div class="caption">Plantilla legal y cookies móvil</div></div>
+  </div>
+  <h3 style="margin:9mm 0 4mm">Reglas</h3>
+  <div class="grid2"><div class="check"><i>✓</i><p>“Ver en Amazon” siempre acompañado por “Enlace de afiliado”.</p></div><div class="check"><i>✓</i><p>Precio y disponibilidad solo con datos actuales y fuente válida.</p></div><div class="check"><i>✓</i><p>Consentimiento de cookies sin favorecer artificialmente “Aceptar”.</p></div><div class="check"><i>✓</i><p>Textos jurídicos revisados antes de publicar.</p></div></div>
+  <div class="footer"><span>Estructura legal: afiliación · aviso · privacidad · cookies</span><span>13</span></div>
+</div></section>
+
+<section class="page"><div class="pad">
+  <div class="topline"><div class="brand"><span class="mark"></span>CABINA LIGERA</div><div class="folio">14 · ACCESIBILIDAD</div></div>
+  <div class="eyebrow">Objetivo recomendado</div><h2 style="margin:3mm 0 8mm">WCAG 2.2 · nivel AA</h2>
+  <img class="board" src="11-decisiones-accesibilidad.png" alt="Criterios de accesibilidad y decisiones pendientes">
+  <div class="grid3" style="margin-top:7mm"><div class="card"><b>Perceptible</b><p class="small">Contraste, texto alternativo, icono + texto.</p></div><div class="card"><b>Operable</b><p class="small">Teclado, foco visible, controles de 44 px.</p></div><div class="card"><b>Comprensible</b><p class="small">Etiquetas, errores claros y jerarquía lógica.</p></div></div>
+  <div class="footer"><span>Validación final con navegador, teclado y tecnologías de asistencia</span><span>14</span></div>
+</div></section>
+
+<section class="page"><div class="pad">
+  <div class="topline"><div class="brand"><span class="mark"></span>CABINA LIGERA</div><div class="folio">15 · HANDOFF</div></div>
+  <div class="eyebrow">Construcción</div><h2 style="margin:3mm 0 8mm">Orden de implementación.</h2>
+  <div class="timeline">
+    <div class="num">1</div><div><h3>Fundamentos</h3><p>Tokens, tipografías, retícula, espaciado y componentes base.</p></div>
+    <div class="num">2</div><div><h3>Estructura global</h3><p>Header, navegación, buscador, footer, legal y afiliación.</p></div>
+    <div class="num">3</div><div><h3>Descubrimiento</h3><p>Inicio, índice de categorías y resultados de búsqueda.</p></div>
+    <div class="num">4</div><div><h3>Contenido principal</h3><p>Comparativa, reseña individual y guía informativa.</p></div>
+    <div class="num">5</div><div><h3>Datos variables</h3><p>Aerolíneas, medidas, comprobador y fechas de revisión.</p></div>
+    <div class="num">6</div><div><h3>Confianza</h3><p>Metodología, contacto, correcciones y páginas legales.</p></div>
+    <div class="num">7</div><div><h3>Calidad</h3><p>Responsive, carga, vacío, error, teclado y pruebas de accesibilidad.</p></div>
+  </div>
+  <div class="grid2" style="margin-top:10mm"><div class="card sage"><h3>Puede avanzar</h3><p>Arquitectura, componentes, contenido estructurado y responsive.</p></div><div class="card coral"><h3>Resolver antes de publicar</h3><p>Naming, dominio, marca, tipografías, imágenes licenciadas, textos legales e integración real con Amazon.</p></div></div>
+  <div class="footer"><span>No inventar API, CMS ni fuente de datos</span><span>15</span></div>
+</div></section>
+
+<section class="page"><div class="pad">
+  <div class="topline"><div class="brand"><span class="mark"></span>CABINA LIGERA</div><div class="folio">16 · INVENTARIO</div></div>
+  <div class="eyebrow">Activos del proyecto</div><h2 style="margin:3mm 0 8mm">24 referencias listas para desarrollo.</h2>
+  <div class="grid2 small">
+    <div class="card"><b>01–08 · Plantillas principales</b><p class="small">Inicio, comparativa, reseña y guía en desktop y móvil.</p></div>
+    <div class="card"><b>09–11 · Sistema</b><p class="small">Identidad visual, biblioteca de componentes y accesibilidad.</p></div>
+    <div class="card"><b>12–15 · Descubrimiento</b><p class="small">Página por aerolínea e índice de categorías en ambos formatos.</p></div>
+    <div class="card"><b>16–19 · Confianza y contacto</b><p class="small">Metodología y contacto en desktop y móvil.</p></div>
+    <div class="card"><b>20–23 · Sistema operativo</b><p class="small">Legales, cookies y búsqueda con estados.</p></div>
+    <div class="card sage"><b>24 · Logotipo refinado</b><p class="small">Cabina modular: lockups y pruebas de escala.</p></div>
+  </div>
+  <h3 style="margin:10mm 0 4mm">Repositorio</h3>
+  <div class="card sky"><p><b>AFILIACION-AMAZON / CABINA LIGERA</b></p><p class="small">Los archivos visuales son la fuente de dirección de arte y UX. Este manual sintetiza criterios, no sustituye los activos originales.</p></div>
+  <h3 style="margin:10mm 0 4mm">Pendiente</h3>
+  <ul class="list"><li>Página 404 desktop/móvil.</li><li>Identidad vectorial final y licencia tipográfica.</li><li>Catálogo de imágenes autorizado.</li><li>Revisión jurídica del contenido legal.</li><li>Definición técnica de CMS, modelo de datos e integración de afiliación.</li></ul>
+  <div class="quote" style="margin-top:12mm">Menos equipaje.<br>Más viaje.</div>
+  <div class="footer"><span>Dirección creativa y UX: KVASIR · 10 septiembre 2026</span><span>16</span></div>
+</div></section>
+
+</body>
+</html>
