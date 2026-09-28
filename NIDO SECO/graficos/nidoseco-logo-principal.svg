@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" role="img" aria-labelledby="title desc">
+  <title id="title">NidoSeco — logotipo principal</title><desc id="desc">Wordmark NidoSeco con Nido en azul profundo y Seco en salvia; la O es un aro ventilado.</desc>
+  <rect width="1280" height="360" fill="#F7F3EC"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="180" letter-spacing="-9">
+    <text x="96" y="230" fill="#234B5C">Nido</text><text x="655" y="230" fill="#A8B8A3">Sec</text>
+  </g>
+  <!-- O ventilada: nunca sustituir por letra O convencional -->
+  <g transform="translate(1060 143)" fill="none" stroke="#A8B8A3" stroke-linecap="round">
+    <circle cx="0" cy="0" r="76" stroke-width="23" stroke-dasharray="405 73" transform="rotate(-38)"/>
+    <path d="M-26 -26 C-8 -40 13 -39 29 -26" stroke="#234B5C" stroke-width="9"/>
+    <path d="M-30 0 C-10 -14 12 -14 31 0" stroke="#234B5C" stroke-width="9"/>
+    <path d="M-26 27 C-8 14 13 14 29 27" stroke="#234B5C" stroke-width="9"/>
+  </g>
+  <text x="96" y="302" fill="#4B626B" font-family="Arial, Helvetica, sans-serif" font-weight="600" font-size="25" letter-spacing="6">SECA MEJOR. RESPIRA TRANQUILO.</text>
+</svg>

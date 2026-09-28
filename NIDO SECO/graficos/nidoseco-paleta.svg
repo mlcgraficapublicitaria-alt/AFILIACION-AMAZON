@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-label="Paleta cromática NidoSeco">
+ <rect width="1200" height="420" fill="#F7F3EC"/><g font-family="Arial,Helvetica,sans-serif"><text x="60" y="80" fill="#234B5C" font-size="35" font-weight="700">PALETA CROMÁTICA</text>
+ <g transform="translate(60 120)"><rect width="250" height="180" rx="20" fill="#234B5C"/><text x="0" y="335" font-size="25" fill="#234B5C" font-weight="700">AZUL NIEBLA</text><text x="0" y="370" font-size="23" fill="#4B626B">#234B5C</text></g>
+ <g transform="translate(340 120)"><rect width="250" height="180" rx="20" fill="#A8B8A3"/><text x="0" y="335" font-size="25" fill="#234B5C" font-weight="700">SALVIA SUAVE</text><text x="0" y="370" font-size="23" fill="#4B626B">#A8B8A3</text></g>
+ <g transform="translate(620 120)"><rect width="250" height="180" rx="20" fill="#F7F3EC" stroke="#D9D5CE"/><text x="0" y="335" font-size="25" fill="#234B5C" font-weight="700">BLANCO CÁLIDO</text><text x="0" y="370" font-size="23" fill="#4B626B">#F7F3EC</text></g>
+ <g transform="translate(900 120)"><rect width="250" height="180" rx="20" fill="#4B626B"/><text x="0" y="335" font-size="25" fill="#234B5C" font-weight="700">GRIS AIRE</text><text x="0" y="370" font-size="23" fill="#4B626B">#4B626B</text></g></g>
+</svg>
